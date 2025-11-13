@@ -9,7 +9,7 @@ export default function NavBar() {
   const links = [
     { href: "/", label: "Inicio" },
     { href: "/miniapps/corazon", label: "Corazón" },
-    { href: "/miniapps/Rompecabezas", label: "Rompecabezas" },
+    { href: "/miniapps/rompecabezas", label: "Rompecabezas" },
     { href: "/miniapps/ajedrez", label: "Ajedrez" },
   ];
 

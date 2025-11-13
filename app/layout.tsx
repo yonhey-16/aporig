@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "./componentes/navbar"; // 👈 importa el navbar
+import NavBar from "./componentes/navbar"; // ✅ importa tu navbar
 
-// Carga fuentes reales de Google Fonts
 const inter = Inter({
-  variable: "--font-inter",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
 const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
@@ -21,16 +20,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="es">
       <body
-        className={`${inter.variable} ${robotoMono.variable} antialiased bg-black text-white`}
+        className={`${inter.variable} ${robotoMono.variable} antialiased bg-[var(--background)] text-[var(--foreground)]`}
       >
-        <NavBar /> {/* 👈 barra fija arriba */}
-        <main className="pt-16 px-4">{children}</main> {/* espacio debajo */}
+        {/* ✅ Navbar siempre visible */}
+        <NavBar />
+
+        {/* ✅ Contenido principal con espacio debajo del navbar */}
+        <main className="pt-16 px-4">{children}</main>
       </body>
     </html>
   );

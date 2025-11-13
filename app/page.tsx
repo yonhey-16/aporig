@@ -10,11 +10,11 @@ export default function HomePage() {
           ❤️ Corazón animado
         </Link>
 
-        <Link href="/miniapps/segunda" className="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700">
+        <Link href="/miniapps/rompecabezas" className="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700">
           🎮  Rompecabezas
         </Link>
 
-        <Link href="/miniapps/tercera" className="bg-green-600 px-6 py-3 rounded-lg hover:bg-green-700">
+        <Link href="/miniapps/ajedrez" className="bg-green-600 px-6 py-3 rounded-lg hover:bg-green-700">
           📸 Ajedrez
         </Link>
       </div>
