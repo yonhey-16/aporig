@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./componentes/navbar"; // 👈 importa el navbar
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Carga fuentes reales de Google Fonts
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
 
@@ -26,9 +27,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+        className={`${inter.variable} ${robotoMono.variable} antialiased bg-black text-white`}
       >
-        <NavBar /> {/* 👈 la barra estará siempre arriba */}
+        <NavBar /> {/* 👈 barra fija arriba */}
         <main className="pt-16 px-4">{children}</main> {/* espacio debajo */}
       </body>
     </html>
